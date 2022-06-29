@@ -1,5 +1,4 @@
 import { gql, useQuery } from '@apollo/client';
-import React from 'react';
 import Lesson from './Lesson';
 
 const GET_LESSONS_QUERY = gql`
@@ -24,7 +23,7 @@ interface GetLessonsQueryResponse {
    }[]
 }
 
-const Sidebar: React.FC = () => {
+const Sidebar = () => {
    const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY);
    // console.log(data);
 
